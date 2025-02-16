@@ -7,7 +7,7 @@ import Sidebar from '@components/organisms/Sidebar';
 import { MainLayoutViewProps } from './MainLayout.types';
 import { motion } from 'motion/react';
 
-const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, handleToggleSidebar }) => (
+const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, handleChangeUIMenu, handleToggleSidebar }) => (
 	<Flex height="100vh" direction="row">
 		{/* Sidebar */}
         <Box display={{ md: 'none' }}>
@@ -24,7 +24,7 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, ha
                     </Sidebar.Logo>
                     <Sidebar.MenuList>
                         {menus.map((menu) => (
-                            <Sidebar.ItemMenu isActive={menu.label === activeMenu} key={menu.label}>{menu.icon}</Sidebar.ItemMenu>
+                            <Sidebar.ItemMenu onClick={() => handleChangeUIMenu(menu.label)} isActive={menu.label === activeMenu} key={menu.label}>{menu.icon}</Sidebar.ItemMenu>
                         ))}
                     </Sidebar.MenuList>
                 </Sidebar.Root>
@@ -37,7 +37,7 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, ha
                 </Sidebar.Logo>
                 <Sidebar.MenuList>
                     {menus.map((menu) => (
-                        <Sidebar.ItemMenu isActive={menu.label === activeMenu} key={menu.label}>{menu.icon}</Sidebar.ItemMenu>
+                        <Sidebar.ItemMenu onClick={() => handleChangeUIMenu(menu.label)} isActive={menu.label === activeMenu} key={menu.label}>{menu.icon}</Sidebar.ItemMenu>
                     ))}
                 </Sidebar.MenuList>
             </Sidebar.Root>
@@ -78,8 +78,10 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, ha
 				</MotionIconButton>
 			</motion.div>
 			{/* End of Render Sidebar Button */}
-
+            
+            {/* Render UI Menu */}
 			<Outlet />
+            {/* End of Render UI Menu */}
 		</Box>
 		{/* End of Content */}
 	</Flex>

@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Menu } from '@data/stores/sidebar/types';
 
 export interface Menu {
-    label: string;
+    label: Menu;
     icon: ReactNode;
     href?: string;
 }
@@ -10,5 +10,6 @@ export interface Menu {
 export interface MainLayoutViewProps {
     isOpenSidebar: boolean;
     activeMenu: Menu;
+    handleChangeUIMenu: (menu: Menu) => void;
     handleToggleSidebar: () => void;
 }
