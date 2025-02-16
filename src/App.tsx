@@ -1,8 +1,17 @@
 import { FC } from "react";
+import { Theme } from "@radix-ui/themes";
+import Navigator from "./viewports/Navigator";
+import { BrowserRouter } from "react-router";
+import "@radix-ui/themes/styles.css";
+import './index.css'
 
 const App: FC = () => {
     return (
-        <h1 className="text-red-500">TailwindCSS</h1>
+        <Theme appearance="dark">
+            <BrowserRouter>
+                <Navigator />
+            </BrowserRouter>
+        </Theme>
     )
 };
 

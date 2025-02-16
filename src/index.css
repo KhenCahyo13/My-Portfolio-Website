@@ -1,1 +1,18 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+@import 'tailwindcss';
+
+/* TailwindCSS Theme */
+@theme {
+    --font-oxanium: 'Oxanium';
+}
+
+/* Override Radix UI Base Themes */
+.radix-themes {
+    --heading-font-family: 'Oxanium'
+}
+
+.dark,
+.dark-theme,
+:is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
+	--color-background: #030712;
+}
