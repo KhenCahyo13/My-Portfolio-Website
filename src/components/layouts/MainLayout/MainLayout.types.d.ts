@@ -5,3 +5,8 @@ export interface Menu {
     icon: ReactNode;
     href?: string;
 }
+
+export interface MainLayoutViewProps {
+    isOpenSidebar: boolean;
+    handleToggleSidebar: () => void;
+}

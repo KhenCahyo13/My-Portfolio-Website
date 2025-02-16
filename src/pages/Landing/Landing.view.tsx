@@ -6,7 +6,7 @@ import { letterVariants, name, socialMediaLinks, textVariants } from './Landing.
 const LandingView: FC = () => (
 	<Fragment>
 		<Box position="absolute" className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1]">
-			<div className="size-[80rem] rounded-full bg-radial from-blue-700/30 via-transparent to-transparent"></div>
+			<div className="size-[44rem] md:size-[64rem] lg:size-[80rem] rounded-full bg-radial from-blue-700/30 via-transparent to-transparent"></div>
 		</Box>
 		<Flex direction="column" gapY="5" justify="center" align="center" height="100%">
 			<Flex direction="column" gapY="2" width="fit-content">
@@ -28,7 +28,7 @@ const LandingView: FC = () => (
 
 				{/* Render Name */}
 				<motion.div initial="hidden" animate="visible" variants={textVariants}>
-					<Heading size="9" align="center">
+					<Heading size='9'>
 						{name.split('').map((char, index) => (
 							<motion.span key={index} variants={letterVariants}>
 								{char}

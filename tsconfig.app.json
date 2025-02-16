@@ -27,6 +27,7 @@
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
       "@viewports/*": ["viewports/*"],
+      "@data/*": ["data/*"],
     }
   },
   "include": ["src"]
