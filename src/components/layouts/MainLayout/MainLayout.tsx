@@ -3,7 +3,7 @@ import MainLayoutView from "./MainLayout.view";
 import { useSidebarStore } from "@data/stores/sidebar";
 
 const MainLayout: FC = () => {
-    const { isOpenSidebar, toggleSidebar }  = useSidebarStore();
+    const { isOpenSidebar, activeMenu, toggleSidebar }  = useSidebarStore();
 
     const handleToggleSidebar = useCallback(() => {
         toggleSidebar();
@@ -11,6 +11,7 @@ const MainLayout: FC = () => {
 
     return <MainLayoutView
         isOpenSidebar={isOpenSidebar}
+        activeMenu={activeMenu}
         handleToggleSidebar={handleToggleSidebar}
     />;
 };
