@@ -1,11 +1,13 @@
-import { Box, Flex } from '@radix-ui/themes';
+import { Box, Flex, IconButton } from '@radix-ui/themes';
 import { Code2, Menu, X } from 'lucide-react';
 import { FC, memo } from 'react';
-import { menus, MotionIconButton, openSidebarVariants, sidebarIconVariants } from './MainLayout.data';
+import { menus, openSidebarVariants, sidebarIconVariants } from './MainLayout.data';
 import { Outlet } from 'react-router';
 import Sidebar from '@components/organisms/Sidebar';
 import { MainLayoutViewProps } from './MainLayout.types';
 import { motion } from 'motion/react';
+
+export const MotionIconButton = motion.create(IconButton);
 
 const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, handleChangeUIMenu, handleToggleSidebar }) => (
 	<Flex height="100vh" direction="row">
