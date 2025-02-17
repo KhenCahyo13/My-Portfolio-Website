@@ -1,12 +1,13 @@
 import { FC } from "react";
 import ArticlesView from "./Articles.view";
 import { useGetMediumArticles } from "@data/queries/articles";
+import NavigatorFallback from "@viewports/Navigator/Navigator.fallback";
 
 const Articles: FC = () => {
     const { data, isLoading, isError } = useGetMediumArticles();
 
     if (isLoading) return (
-        'Loading...'
+        <NavigatorFallback />
     );
 
     if (isError) return (

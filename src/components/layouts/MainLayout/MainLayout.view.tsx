@@ -1,5 +1,5 @@
 import { Box, Flex, IconButton } from "@radix-ui/themes";
-import { Code2, Menu, X } from "lucide-react";
+import { Hash, Menu, X } from "lucide-react";
 import { FC, memo } from "react";
 import {
     menus,
@@ -37,7 +37,7 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({
             >
                 <Sidebar.Root>
                     <Sidebar.Logo>
-                        <Code2 size={32} />
+                        <Hash size={32} />
                     </Sidebar.Logo>
                     <Sidebar.MenuList>
                         {menus.map((menu) => (
@@ -56,7 +56,7 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({
         <Box display={{ initial: "none", md: "block" }}>
             <Sidebar.Root>
                 <Sidebar.Logo>
-                    <Code2 size={24} />
+                    <Hash size={24} />
                 </Sidebar.Logo>
                 <Sidebar.MenuList>
                     {menus.map((menu) => (
