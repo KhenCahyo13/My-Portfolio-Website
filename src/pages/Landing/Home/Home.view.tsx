@@ -22,7 +22,7 @@ const HomeView: FC = () => (
 						delay: 3.8,
 					}}
 				>
-					<Code className="w-fit -rotate-12 block">HELLO, IM</Code>
+					<Code className="w-fit -rotate-12 block">HELLO, I'M</Code>
 				</motion.div>
 				{/* End of Render Hello */}
 
