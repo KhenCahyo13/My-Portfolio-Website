@@ -1,7 +1,7 @@
-import { Card, Flex, Grid, Heading, Text } from '@radix-ui/themes';
+import { Flex, Grid, Heading } from '@radix-ui/themes';
 import { FC, memo } from 'react';
 import { dbms, devops, frameworks, gits, programmingLanguages } from './Skills.data';
-import { motion } from 'motion/react';
+import CardSkill from '@components/organisms/Card/CardSkill';
 
 const SkillsView: FC = () => (
 	<Flex direction="column" justify="center" gapY="4">
@@ -17,30 +17,7 @@ const SkillsView: FC = () => (
 				</Heading>
 				<Grid columns={{ initial: '2', md: '4', lg: '6' }} gap="4">
 					{programmingLanguages.map((skill, index) => (
-						<motion.div
-							key={skill.label}
-							initial={{ x: -100, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							transition={{
-								type: 'spring',
-								stiffness: 100,
-								damping: 25,
-								delay: index * 0.3,
-							}}
-						>
-							<Card>
-								<Flex
-									direction="column"
-									gapY="3"
-									align="center"
-									justify="center"
-									height={{ initial: '8rem', md: '10rem' }}
-								>
-									<img src={skill.logo} alt={skill.label} className="w-20 md:w-24 rounded" />
-									<Text align='center' className="font-medium">{skill.label}</Text>
-								</Flex>
-							</Card>
-						</motion.div>
+						<CardSkill key={skill.label} skill={skill} index={index} />
 					))}
 				</Grid>
 			</Flex>
@@ -53,30 +30,7 @@ const SkillsView: FC = () => (
 				</Heading>
                 <Grid columns={{ initial: '2', md: '4', lg: '6' }} gap="4">
 					{frameworks.map((skill, index) => (
-						<motion.div
-							key={skill.label}
-							initial={{ x: -100, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							transition={{
-								type: 'spring',
-								stiffness: 100,
-								damping: 25,
-								delay: index * 0.3,
-							}}
-						>
-							<Card>
-								<Flex
-									direction="column"
-									gapY="3"
-									align="center"
-									justify="center"
-									height={{ initial: '8rem', md: '10rem' }}
-								>
-									<img src={skill.logo} alt={skill.label} className="w-20 md:w-24 rounded" />
-									<Text align='center' className="font-medium">{skill.label}</Text>
-								</Flex>
-							</Card>
-						</motion.div>
+						<CardSkill key={skill.label} skill={skill} index={index} />
 					))}
 				</Grid>
 			</Flex>
@@ -89,30 +43,7 @@ const SkillsView: FC = () => (
 				</Heading>
                 <Grid columns={{ initial: '2', md: '4', lg: '6' }} gap="4">
 					{dbms.map((skill, index) => (
-						<motion.div
-							key={skill.label}
-							initial={{ x: -100, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							transition={{
-								type: 'spring',
-								stiffness: 100,
-								damping: 25,
-								delay: index * 0.3,
-							}}
-						>
-							<Card>
-								<Flex
-									direction="column"
-									gapY="3"
-									align="center"
-									justify="center"
-									height={{ initial: '8rem', md: '10rem' }}
-								>
-									<img src={skill.logo} alt={skill.label} className="w-20 md:w-24 rounded" />
-									<Text align='center' className="font-medium">{skill.label}</Text>
-								</Flex>
-							</Card>
-						</motion.div>
+						<CardSkill key={skill.label} skill={skill} index={index} />
 					))}
 				</Grid>
             </Flex>
@@ -125,30 +56,7 @@ const SkillsView: FC = () => (
 				</Heading>
                 <Grid columns={{ initial: '2', md: '4', lg: '6' }} gap="4">
 					{gits.map((skill, index) => (
-						<motion.div
-							key={skill.label}
-							initial={{ x: -100, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							transition={{
-								type: 'spring',
-								stiffness: 100,
-								damping: 25,
-								delay: index * 0.3,
-							}}
-						>
-							<Card>
-								<Flex
-									direction="column"
-									gapY="3"
-									align="center"
-									justify="center"
-									height={{ initial: '8rem', md: '10rem' }}
-								>
-									<img src={skill.logo} alt={skill.label} className="w-20 md:w-24 rounded" />
-									<Text align='center' className="font-medium">{skill.label}</Text>
-								</Flex>
-							</Card>
-						</motion.div>
+						<CardSkill key={skill.label} skill={skill} index={index} />
 					))}
 				</Grid>
             </Flex>
@@ -161,30 +69,7 @@ const SkillsView: FC = () => (
 				</Heading>
                 <Grid columns={{ initial: '2', md: '4', lg: '6' }} gap="4">
 					{devops.map((skill, index) => (
-						<motion.div
-							key={skill.label}
-							initial={{ x: -100, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							transition={{
-								type: 'spring',
-								stiffness: 100,
-								damping: 25,
-								delay: index * 0.3,
-							}}
-						>
-							<Card>
-								<Flex
-									direction="column"
-									gapY="3"
-									align="center"
-									justify="center"
-									height={{ initial: '8rem', md: '10rem' }}
-								>
-									<img src={skill.logo} alt={skill.label} className="w-20 md:w-24 rounded" />
-									<Text align='center' className="font-medium">{skill.label}</Text>
-								</Flex>
-							</Card>
-						</motion.div>
+						<CardSkill key={skill.label} skill={skill} index={index} />
 					))}
 				</Grid>
             </Flex>
