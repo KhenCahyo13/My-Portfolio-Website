@@ -5,10 +5,10 @@ import MenuList from "@components/molecules/Sidebar/MenuList";
 import ItemMenu from "@components/atoms/Sidebar/ItemMenu";
 
 const Sidebar: SidebarCompoundComponents = {
-  Root: Root,
-  Logo: Logo,
-  MenuList: MenuList,
-  ItemMenu: ItemMenu,
+    Root: Root,
+    Logo: Logo,
+    MenuList: MenuList,
+    ItemMenu: ItemMenu,
 };
 
 Sidebar.Root = Root;

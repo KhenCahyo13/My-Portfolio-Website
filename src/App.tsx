@@ -6,13 +6,13 @@ import "@radix-ui/themes/styles.css";
 import "./index.css";
 
 const App: FC = () => {
-  return (
-    <Theme appearance="dark">
-      <BrowserRouter>
-        <Navigator />
-      </BrowserRouter>
-    </Theme>
-  );
+    return (
+        <Theme appearance="dark">
+            <BrowserRouter>
+                <Navigator />
+            </BrowserRouter>
+        </Theme>
+    );
 };
 
 export default App;

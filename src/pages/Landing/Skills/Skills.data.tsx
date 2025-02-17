@@ -19,92 +19,92 @@ import RedisLogo from "@assets/logo/redis.png";
 import RabbitMQLogo from "@assets/logo/rabbitmq.png";
 
 export const programmingLanguages: Skill[] = [
-  {
-    label: "JavaScript",
-    logo: JSLogo,
-  },
-  {
-    label: "PHP",
-    logo: PHPLogo,
-  },
-  {
-    label: "Java",
-    logo: JavaLogo,
-  },
+    {
+        label: "JavaScript",
+        logo: JSLogo,
+    },
+    {
+        label: "PHP",
+        logo: PHPLogo,
+    },
+    {
+        label: "Java",
+        logo: JavaLogo,
+    },
 ];
 
 export const frameworks: Skill[] = [
-  {
-    label: "Laravel",
-    logo: LaraveLogo,
-  },
-  {
-    label: "Codeigniter",
-    logo: CodeigniterLogo,
-  },
-  {
-    label: "ReactJS",
-    logo: ReactJSLogo,
-  },
-  {
-    label: "React Native",
-    logo: ReactJSLogo,
-  },
-  {
-    label: "NestJS",
-    logo: NestJSLogo,
-  },
-  {
-    label: "ExpressJS",
-    logo: ExpressJSLogo,
-  },
-  {
-    label: "TailwindCSS",
-    logo: TailwindLogo,
-  },
-  {
-    label: "Bootstrap",
-    logo: BootstrapLogo,
-  },
+    {
+        label: "Laravel",
+        logo: LaraveLogo,
+    },
+    {
+        label: "Codeigniter",
+        logo: CodeigniterLogo,
+    },
+    {
+        label: "ReactJS",
+        logo: ReactJSLogo,
+    },
+    {
+        label: "React Native",
+        logo: ReactJSLogo,
+    },
+    {
+        label: "NestJS",
+        logo: NestJSLogo,
+    },
+    {
+        label: "ExpressJS",
+        logo: ExpressJSLogo,
+    },
+    {
+        label: "TailwindCSS",
+        logo: TailwindLogo,
+    },
+    {
+        label: "Bootstrap",
+        logo: BootstrapLogo,
+    },
 ];
 
 export const dbms: Skill[] = [
-  {
-    label: "MySQL",
-    logo: MySQLLogo,
-  },
-  {
-    label: "Microsoft SQL Server",
-    logo: SQLServer,
-  },
-  {
-    label: "Postgree",
-    logo: PostgreeLogo,
-  },
+    {
+        label: "MySQL",
+        logo: MySQLLogo,
+    },
+    {
+        label: "Microsoft SQL Server",
+        logo: SQLServer,
+    },
+    {
+        label: "Postgree",
+        logo: PostgreeLogo,
+    },
 ];
 
 export const gits: Skill[] = [
-  {
-    label: "Gitlab",
-    logo: GitlabLogo,
-  },
-  {
-    label: "Github",
-    logo: GithubLogo,
-  },
+    {
+        label: "Gitlab",
+        logo: GitlabLogo,
+    },
+    {
+        label: "Github",
+        logo: GithubLogo,
+    },
 ];
 
 export const devops: Skill[] = [
-  {
-    label: "Docker",
-    logo: DockerLogo,
-  },
-  {
-    label: "Redis",
-    logo: RedisLogo,
-  },
-  {
-    label: "RabbitMQ",
-    logo: RabbitMQLogo,
-  },
+    {
+        label: "Docker",
+        logo: DockerLogo,
+    },
+    {
+        label: "Redis",
+        logo: RedisLogo,
+    },
+    {
+        label: "RabbitMQ",
+        logo: RabbitMQLogo,
+    },
 ];

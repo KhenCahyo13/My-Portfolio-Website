@@ -7,26 +7,26 @@ import About from "./About";
 import Skills from "./Skills";
 
 const LandingView: FC<LandingViewProps> = ({ activeMenu }) => (
-  <AnimatePresence mode="wait">
-    <motion.div
-      key={activeMenu} // Pastikan key berubah setiap menu berubah
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      variants={renderMenuUiVariants}
-      className="w-full h-full"
-    >
-      {activeMenu === "Home" ? (
-        <Home />
-      ) : activeMenu === "About" ? (
-        <About />
-      ) : activeMenu === "Skills" ? (
-        <Skills />
-      ) : (
-        <Home />
-      )}
-    </motion.div>
-  </AnimatePresence>
+    <AnimatePresence mode="wait">
+        <motion.div
+            key={activeMenu} // Pastikan key berubah setiap menu berubah
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={renderMenuUiVariants}
+            className="w-full h-full"
+        >
+            {activeMenu === "Home" ? (
+                <Home />
+            ) : activeMenu === "About" ? (
+                <About />
+            ) : activeMenu === "Skills" ? (
+                <Skills />
+            ) : (
+                <Home />
+            )}
+        </motion.div>
+    </AnimatePresence>
 );
 
 export default memo(LandingView);

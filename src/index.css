@@ -3,16 +3,16 @@
 
 /* TailwindCSS Theme */
 @theme {
-  --font-oxanium: "Oxanium";
+    --font-oxanium: "Oxanium";
 }
 
 /* Override Radix UI Base Themes */
 .radix-themes {
-  --default-font-family: "Oxanium";
+    --default-font-family: "Oxanium";
 }
 
 .dark,
 .dark-theme,
 :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
-  --color-background: #030712;
+    --color-background: #030712;
 }

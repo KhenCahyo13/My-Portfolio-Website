@@ -2,7 +2,7 @@ import { FC } from "react";
 import AboutView from "./About.view";
 
 const About: FC = () => {
-  return <AboutView />;
+    return <AboutView />;
 };
 
 export default About;
