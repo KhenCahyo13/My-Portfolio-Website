@@ -1,8 +1,8 @@
-export type MenuType = 'Home' | 'About';
+export type MenuType = 'Home' | 'About' | 'Skills';
 
 export interface SidebarStore {
     isOpenSidebar: boolean;
-    activeMenu: Menu;
+    activeMenu: MenuType;
     changeActiveMenu: (menu: Menu) => void;
     toggleSidebar: () => void;
 }
