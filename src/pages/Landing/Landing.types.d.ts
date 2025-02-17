@@ -1,4 +1,4 @@
-import { Menu } from "@data/stores/sidebar/types";
+import { MenuType } from "@data/stores/sidebar/types";
 import { ReactNode } from "react";
 
 export interface SocialMediaLink {
@@ -8,5 +8,5 @@ export interface SocialMediaLink {
 }
 
 export interface LandingViewProps {
-    activeMenu: Menu;
+    activeMenu: MenuType;
 }

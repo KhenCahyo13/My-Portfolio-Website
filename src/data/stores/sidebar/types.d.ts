@@ -1,4 +1,4 @@
-export type Menu = 'Home' | 'About';
+export type MenuType = 'Home' | 'About';
 
 export interface SidebarStore {
     isOpenSidebar: boolean;

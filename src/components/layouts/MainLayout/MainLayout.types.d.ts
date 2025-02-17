@@ -10,6 +10,6 @@ export interface Menu {
 export interface MainLayoutViewProps {
     isOpenSidebar: boolean;
     activeMenu: Menu;
-    handleChangeUIMenu: (menu: Menu) => void;
+    handleChangeUIMenu: (menu: MenuType) => void;
     handleToggleSidebar: () => void;
 }

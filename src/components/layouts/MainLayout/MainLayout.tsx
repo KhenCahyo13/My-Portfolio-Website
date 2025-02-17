@@ -1,14 +1,14 @@
 import { FC, useCallback , useTransition} from "react";
 import MainLayoutView from "./MainLayout.view";
 import { useSidebarStore } from "@data/stores/sidebar";
-import { Menu } from "@data/stores/sidebar/types";
+import { MenuType } from "@data/stores/sidebar/types";
 
 const MainLayout: FC = () => {
     const { isOpenSidebar, activeMenu, changeActiveMenu, toggleSidebar }  = useSidebarStore();
 
     const [isPending, startTransition] = useTransition();
 
-    const handleChangeUIMenu = (menu: Menu) => {
+    const handleChangeUIMenu = (menu: MenuType) => {
         startTransition(() => {
             changeActiveMenu(menu);
         });
