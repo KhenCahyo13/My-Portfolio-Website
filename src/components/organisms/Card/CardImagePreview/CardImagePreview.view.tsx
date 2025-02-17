@@ -1,10 +1,11 @@
 import { FC, memo } from "react";
 import { motion } from "motion/react";
-import { Card, Flex, Text } from "@radix-ui/themes";
-import { CardSkillViewProps } from "./CardSkill.types";
+import { Box, Card, Flex, Text } from "@radix-ui/themes";
+import { CardImagePreviewViewProps } from "./CardImagePreview.types";
 
-const CardSkillView: FC<CardSkillViewProps> = ({
-    skill,
+const CardImagePreview: FC<CardImagePreviewViewProps> = ({
+    label,
+    image,
     index,
     ref,
     inView,
@@ -31,17 +32,15 @@ const CardSkillView: FC<CardSkillViewProps> = ({
                 justify="center"
                 height={{ initial: "8rem", md: "10rem" }}
             >
-                <img
-                    src={skill.logo}
-                    alt={skill.label}
-                    className="w-20 md:w-24 rounded"
-                />
-                <Text align="center" className="font-medium">
-                    {skill.label}
+                <Box width={{ initial: '5rem', md: '6rem' }} height={{ initial: '5rem', md: '6rem' }}>
+                    <img src={image} alt={label} className="object-cover h-full w-full rounded-md" />
+                </Box>
+                <Text align="center" className="font-medium flex-1">
+                    {label}
                 </Text>
             </Flex>
         </Card>
     </motion.div>
 );
 
-export default memo(CardSkillView);
+export default memo(CardImagePreview);

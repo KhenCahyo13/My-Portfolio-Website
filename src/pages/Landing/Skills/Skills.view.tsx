@@ -7,7 +7,7 @@ import {
     gits,
     programmingLanguages,
 } from "./Skills.data";
-import CardSkill from "@components/organisms/Card/CardSkill";
+import CardImagePreview from "@components/organisms/Card/CardImagePreview";
 
 const SkillsView: FC = () => (
     <Fragment>
@@ -17,7 +17,13 @@ const SkillsView: FC = () => (
         >
             <div className="size-[44rem] md:size-[64rem] lg:size-[80rem] rounded-full bg-radial from-blue-700/30 via-transparent to-transparent"></div>
         </Box>
-        <Flex direction="column" justify="center" gapY="4" py='6' px={{ initial: "6", lg: "9" }}>
+        <Flex
+            direction="column"
+            justify="center"
+            gapY="4"
+            py="6"
+            px={{ initial: "6", lg: "9" }}
+        >
             <Heading as="h1" size={{ initial: "6", md: "7" }}>
                 SKILLS
             </Heading>
@@ -30,9 +36,10 @@ const SkillsView: FC = () => (
                     </Heading>
                     <Grid columns={{ initial: "2", md: "4", lg: "6" }} gap="4">
                         {programmingLanguages.map((skill, index) => (
-                            <CardSkill
+                            <CardImagePreview
                                 key={skill.label}
-                                skill={skill}
+                                label={skill.label}
+                                image={skill.logo}
                                 index={index}
                             />
                         ))}
@@ -47,9 +54,10 @@ const SkillsView: FC = () => (
                     </Heading>
                     <Grid columns={{ initial: "2", md: "4", lg: "6" }} gap="4">
                         {frameworks.map((skill, index) => (
-                            <CardSkill
+                            <CardImagePreview
                                 key={skill.label}
-                                skill={skill}
+                                label={skill.label}
+                                image={skill.logo}
                                 index={index}
                             />
                         ))}
@@ -64,9 +72,10 @@ const SkillsView: FC = () => (
                     </Heading>
                     <Grid columns={{ initial: "2", md: "4", lg: "6" }} gap="4">
                         {dbms.map((skill, index) => (
-                            <CardSkill
+                            <CardImagePreview
                                 key={skill.label}
-                                skill={skill}
+                                label={skill.label}
+                                image={skill.logo}
                                 index={index}
                             />
                         ))}
@@ -81,9 +90,10 @@ const SkillsView: FC = () => (
                     </Heading>
                     <Grid columns={{ initial: "2", md: "4", lg: "6" }} gap="4">
                         {gits.map((skill, index) => (
-                            <CardSkill
+                            <CardImagePreview
                                 key={skill.label}
-                                skill={skill}
+                                label={skill.label}
+                                image={skill.logo}
                                 index={index}
                             />
                         ))}
@@ -98,9 +108,10 @@ const SkillsView: FC = () => (
                     </Heading>
                     <Grid columns={{ initial: "2", md: "4", lg: "6" }} gap="4">
                         {devops.map((skill, index) => (
-                            <CardSkill
+                            <CardImagePreview
                                 key={skill.label}
-                                skill={skill}
+                                label={skill.label}
+                                image={skill.logo}
                                 index={index}
                             />
                         ))}
