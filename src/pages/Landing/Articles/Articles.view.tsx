@@ -20,7 +20,7 @@ const ArticlesView: FC<ArticlesViewProps> = ({ articles, feed }) => (
         >
             <Flex direction="column" gapY="1">
                 <Heading as="h1" size={{ initial: "6", md: "7" }}>
-                    Articles
+                    ARTICLES
                 </Heading>
                 <Text as="p" className="w-full md:w-[40rem]">
                     Sometimes, when I have free time, I write articles on Medium
