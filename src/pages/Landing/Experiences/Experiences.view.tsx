@@ -23,7 +23,7 @@ const ExperiencesView: FC<ExperiencesViewProps> = ({
             gapX="8"
             gapY="4"
             height="100vh"
-            py="6"
+            py={{ initial: '4', md: '6' }}
             px={{ initial: "6", lg: "9" }}
         >
             <Flex

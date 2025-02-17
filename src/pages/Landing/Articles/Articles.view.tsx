@@ -15,7 +15,7 @@ const ArticlesView: FC<ArticlesViewProps> = ({ articles, feed }) => (
             direction="column"
             justify="center"
             gapY="4"
-            py="6"
+            py={{ initial: '4', md: '6' }}
             px={{ initial: "6", lg: "9" }}
         >
             <Flex direction="column" gapY="1">

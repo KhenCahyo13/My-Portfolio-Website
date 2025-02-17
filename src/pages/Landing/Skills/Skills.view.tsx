@@ -21,7 +21,7 @@ const SkillsView: FC = () => (
             direction="column"
             justify="center"
             gapY="4"
-            py="6"
+            py={{ initial: '4', md: '6' }}
             px={{ initial: "6", lg: "9" }}
         >
             <Heading as="h1" size={{ initial: "6", md: "7" }}>
