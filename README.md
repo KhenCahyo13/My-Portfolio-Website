@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-This project contains my personal portfolio websiet. You can use this project for creating your personal portfolio website.
+This project contains my personal portfolio website. You can use this project for creating your personal portfolio website.
 
 ## Tech Stack
 
