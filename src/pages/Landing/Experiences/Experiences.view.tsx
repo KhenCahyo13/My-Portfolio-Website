@@ -90,11 +90,11 @@ const ExperiencesView: FC<ExperiencesViewProps> = ({
                                         {data.position}
                                     </Heading>
                                     <Flex direction="row" align="center">
-                                        <Text as="span" size="2">
-                                            {data.startDate} - {data.endDate}
+                                        <Text as="span" size="2" className="italic">
+                                            {data.startDate} - {activeTab === 'PT. Beemata Indonesia' ? 'Present' : data.endDate}
                                         </Text>
                                         <Dot />
-                                        <Text as="span" size="2" color="blue">
+                                        <Text as="span" size="2" color="blue" className="italic">
                                             {calculateDuration(
                                                 data.startDate,
                                                 data.endDate,
