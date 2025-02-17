@@ -1,15 +1,15 @@
+import { MenuType } from "@data/stores/sidebar/types";
 import { ReactNode } from "react";
-import { Menu } from '@data/stores/sidebar/types';
 
 export interface Menu {
-    label: Menu;
+    label: MenuType;
     icon: ReactNode;
     href?: string;
 }
 
 export interface MainLayoutViewProps {
     isOpenSidebar: boolean;
-    activeMenu: Menu;
+    activeMenu: MenuType;
     handleChangeUIMenu: (menu: MenuType) => void;
     handleToggleSidebar: () => void;
 }

@@ -1,9 +1,10 @@
 import { FC, memo } from 'react';
 import { LandingViewProps } from './Landing.types';
-import Home from './Home';
-import About from './About';
 import { motion, AnimatePresence } from 'motion/react';
 import { renderMenuUiVariants } from './Landing.data';
+import Home from './Home';
+import About from './About';
+import Skills from './Skills';
 
 const LandingView: FC<LandingViewProps> = ({ activeMenu }) => (
 	<AnimatePresence mode="wait">
@@ -15,7 +16,13 @@ const LandingView: FC<LandingViewProps> = ({ activeMenu }) => (
 			variants={renderMenuUiVariants}
 			className="w-full h-full"
 		>
-			{activeMenu === 'Home' ? <Home /> : activeMenu === 'About' ? <About /> : <Home />}
+			{activeMenu === 'Home' ? (
+                <Home />
+            ) : activeMenu === 'About' ? (
+                <About />
+            ) : activeMenu === 'Skills' ? (
+                <Skills />
+            ) : <Home />}
 		</motion.div>
 	</AnimatePresence>
 );

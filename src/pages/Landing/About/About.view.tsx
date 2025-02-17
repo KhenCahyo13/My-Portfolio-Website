@@ -16,8 +16,6 @@ const AboutView: FC = () => (
 			gapX="8"
 			justify="center"
 			align="center"
-			height="100%"
-			width="100%"
 		>
 			<Box
 				width={{ initial: '12rem', md: '48rem', lg: '60rem' }}

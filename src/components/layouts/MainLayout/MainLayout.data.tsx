@@ -1,4 +1,4 @@
-import { Home, Info } from 'lucide-react';
+import { Highlighter, Home, Info } from 'lucide-react';
 import { Menu } from './MainLayout.types';
 
 export const menus: Menu[] = [
@@ -9,6 +9,10 @@ export const menus: Menu[] = [
 	{
 		label: 'About',
 		icon: <Info size={20} />,
+	},
+	{
+		label: 'Skills',
+		icon: <Highlighter size={20} />,
 	},
 ];
 

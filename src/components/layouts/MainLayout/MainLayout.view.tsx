@@ -9,45 +9,71 @@ import { motion } from 'motion/react';
 
 export const MotionIconButton = motion.create(IconButton);
 
-const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, handleChangeUIMenu, handleToggleSidebar }) => (
-	<Flex height="100vh" direction="row">
+const MainLayoutView: FC<MainLayoutViewProps> = ({
+	isOpenSidebar,
+	activeMenu,
+	handleChangeUIMenu,
+	handleToggleSidebar,
+}) => (
+	<Flex height="100vh" direction="row" position="relative">
 		{/* Sidebar */}
-        <Box display={{ md: 'none' }}>
-            <motion.div
-                initial="closed"
-                animate={isOpenSidebar ? 'open' : 'closed'}
-                variants={openSidebarVariants}
-                transition={{ duration: 0.4, ease: 'easeInOut' }}
-                className="absolute left-0 top-0 h-full z-10"
-            >
-                <Sidebar.Root>
-                    <Sidebar.Logo>
-                        <Code2 size={32} />
-                    </Sidebar.Logo>
-                    <Sidebar.MenuList>
-                        {menus.map((menu) => (
-                            <Sidebar.ItemMenu onClick={() => handleChangeUIMenu(menu.label)} isActive={menu.label === activeMenu} key={menu.label}>{menu.icon}</Sidebar.ItemMenu>
-                        ))}
-                    </Sidebar.MenuList>
-                </Sidebar.Root>
-            </motion.div>
-        </Box>
-        <Box display={{ initial: 'none', md: 'block' }}>
-            <Sidebar.Root>
-                <Sidebar.Logo>
-                    <Code2 size={24} />
-                </Sidebar.Logo>
-                <Sidebar.MenuList>
-                    {menus.map((menu) => (
-                        <Sidebar.ItemMenu onClick={() => handleChangeUIMenu(menu.label)} isActive={menu.label === activeMenu} key={menu.label}>{menu.icon}</Sidebar.ItemMenu>
-                    ))}
-                </Sidebar.MenuList>
-            </Sidebar.Root>
-        </Box>
+		<Box display={{ md: 'none' }}>
+			<motion.div
+				initial="closed"
+				animate={isOpenSidebar ? 'open' : 'closed'}
+				variants={openSidebarVariants}
+				transition={{ duration: 0.4, ease: 'easeInOut' }}
+				className="absolute left-0 top-0 h-full z-10"
+			>
+				<Sidebar.Root>
+					<Sidebar.Logo>
+						<Code2 size={32} />
+					</Sidebar.Logo>
+					<Sidebar.MenuList>
+						{menus.map((menu) => (
+							<Sidebar.ItemMenu
+								onClick={() => handleChangeUIMenu(menu.label)}
+								isActive={menu.label === activeMenu}
+								key={menu.label}
+							>
+								{menu.icon}
+							</Sidebar.ItemMenu>
+						))}
+					</Sidebar.MenuList>
+				</Sidebar.Root>
+			</motion.div>
+		</Box>
+		<Box display={{ initial: 'none', md: 'block' }}>
+			<Sidebar.Root>
+				<Sidebar.Logo>
+					<Code2 size={24} />
+				</Sidebar.Logo>
+				<Sidebar.MenuList>
+					{menus.map((menu) => (
+						<Sidebar.ItemMenu
+							onClick={() => handleChangeUIMenu(menu.label)}
+							isActive={menu.label === activeMenu}
+							key={menu.label}
+						>
+							{menu.icon}
+						</Sidebar.ItemMenu>
+					))}
+				</Sidebar.MenuList>
+			</Sidebar.Root>
+		</Box>
 		{/* End of Sidebar */}
 
 		{/* Content */}
-		<Flex px={{ initial: '6', lg: '9' }} py="6" direction='column' gapY={activeMenu !== 'Home' ? '6' : '0'} height="100%" flexGrow="1" overflowY="scroll" overflowX='hidden' position="relative">
+		<Flex
+			px={{ initial: '6', lg: '9' }}
+			py="6"
+			direction="column"
+			height="100%"
+			minHeight="100%"
+			flexGrow="1"
+			position="relative"
+            overflowX='hidden'
+		>
 			{/* Render Sidebar Button */}
 			<motion.div
 				animate={{ justifyContent: isOpenSidebar ? 'end' : 'start' }}
@@ -80,10 +106,12 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, ha
 				</MotionIconButton>
 			</motion.div>
 			{/* End of Render Sidebar Button */}
-            
-            {/* Render UI Menu */}
-			<Outlet />
-            {/* End of Render UI Menu */}
+
+			{/* Render UI Menu */}
+            <Box py={activeMenu !== 'Home' ? '5' : '0'}>
+			    <Outlet />
+            </Box>
+			{/* End of Render UI Menu */}
 		</Flex>
 		{/* End of Content */}
 	</Flex>
