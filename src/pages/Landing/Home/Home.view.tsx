@@ -28,7 +28,7 @@ const HomeView: FC = () => (
 
 				{/* Render Name */}
 				<motion.div initial="hidden" animate="visible" variants={textVariants}>
-					<Heading size={{ initial: '8', md: '9' }}>
+					<Heading as='h1' size={{ initial: '8', md: '9' }}>
 						{name.split('').map((char, index) => (
 							<motion.span key={index} variants={letterVariants}>
 								{char}

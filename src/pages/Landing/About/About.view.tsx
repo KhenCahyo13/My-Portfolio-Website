@@ -40,7 +40,7 @@ const AboutView: FC = () => (
 				transition={{ type: 'spring', stiffness: 100, damping: 25 }}
 			>
 				<Flex direction="column" gapY="4">
-					<Heading size={{ initial: '6', md: '7' }}>ABOUT ME</Heading>
+					<Heading as='h1' size={{ initial: '6', md: '7' }}>ABOUT ME</Heading>
 					<Flex direction="column" gapY="2">
 						<Text as="p" className='font-oxanium'>
 							Hello! I'm{' '}
