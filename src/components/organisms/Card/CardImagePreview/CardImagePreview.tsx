@@ -5,7 +5,7 @@ import CardImagePreviewView from "./CardImagePreview.view";
 
 const CardImagePreview: FC<CardImagePreviewProps> = ({ label, image, index }) => {
     const { ref, inView } = useInView({
-        triggerOnce: true,
+        triggerOnce: false,
         threshold: 0.1,
     });
 
