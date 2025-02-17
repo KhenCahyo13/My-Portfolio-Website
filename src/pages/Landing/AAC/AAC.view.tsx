@@ -21,7 +21,7 @@ const AACView: FC = () => (
             <Heading as="h1" size={{ initial: "6", md: "7" }}>
                 LICENSE AND CERTIFICATION
             </Heading>
-            <Grid columns={{ initial: "2", md: "4", lg: "6" }} gap="4">
+            <Grid columns={{ initial: "1", md: "4", lg: "5" }} gap="4">
                 {aac.map((aac, index) => (
                     <CardImagePreview
                         key={aac.label}
