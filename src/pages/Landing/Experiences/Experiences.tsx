@@ -27,6 +27,7 @@ const Experiences: FC = () => {
 
     return (
         <ExperiencesView
+            isPending={isPending}
             activeTab={activeTab}
             handleChangeActiveTab={handleChangeActiveTab}
             dataExperienceByActiveTab={dataExperienceByActiveTab}

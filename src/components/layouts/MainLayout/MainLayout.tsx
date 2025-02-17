@@ -6,7 +6,7 @@ import { MenuType } from "@data/stores/sidebar/types";
 const MainLayout: FC = () => {
     const { isOpenSidebar, activeMenu, changeActiveMenu, toggleSidebar } =
         useSidebarStore();
-
+        
     const [isPending, startTransition] = useTransition();
 
     const handleChangeUIMenu = (menu: MenuType) => {
@@ -21,6 +21,7 @@ const MainLayout: FC = () => {
 
     return (
         <MainLayoutView
+            isPending={isPending}
             isOpenSidebar={isOpenSidebar}
             activeMenu={activeMenu}
             handleChangeUIMenu={handleChangeUIMenu}

@@ -5,8 +5,10 @@ import { ExperiencesViewProps } from "./Experiences.types";
 import { experienceTabs } from "./Experiences.data";
 import { motion } from "motion/react";
 import { calculateDuration } from "@utils/datetime";
+import NavigatorFallback from "@viewports/Navigator/Navigator.fallback";
 
 const ExperiencesView: FC<ExperiencesViewProps> = ({
+    isPending,
     activeTab,
     handleChangeActiveTab,
     dataExperienceByActiveTab,
@@ -67,64 +69,68 @@ const ExperiencesView: FC<ExperiencesViewProps> = ({
                 </Box>
             </Flex>
             <Box flexGrow="1">
-                <ol className="relative border-s border-gray-200 dark:border-gray-700">
-                    {dataExperienceByActiveTab.map((data, index) => (
-                        <li key={index} className="mb-6 ms-5">
-                            <div
-                                className={`absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 ${data.stillActive ? "dark:bg-blue-500" : "dark:bg-gray-700"}`}
-                            ></div>
-                            <motion.div
-                                key={data.id}
-                                initial={{ opacity: 0, x: -50 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{
-                                    duration: 0.5,
-                                    delay: index * 0.2,
-                                }}
-                            >
-                                <Flex direction="column">
-                                    <Heading
-                                        as="h2"
-                                        size={{ initial: "4", md: "5" }}
-                                    >
-                                        {data.position}
-                                    </Heading>
-                                    <Flex direction="row" align="center">
-                                        <Text
-                                            as="span"
-                                            size="2"
-                                            className="italic"
+                {isPending ? (
+                    <NavigatorFallback />
+                ) : (
+                    <ol className="relative border-s border-gray-200 dark:border-gray-700">
+                        {dataExperienceByActiveTab.map((data, index) => (
+                            <li key={index} className="mb-6 ms-5">
+                                <div
+                                    className={`absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 ${data.stillActive ? "dark:bg-blue-500" : "dark:bg-gray-700"}`}
+                                ></div>
+                                <motion.div
+                                    key={data.id}
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: index * 0.2,
+                                    }}
+                                >
+                                    <Flex direction="column">
+                                        <Heading
+                                            as="h2"
+                                            size={{ initial: "4", md: "5" }}
                                         >
-                                            {data.startDate} -{" "}
-                                            {activeTab ===
-                                            "PT. Beemata Indonesia"
-                                                ? "Present"
-                                                : data.endDate}
+                                            {data.position}
+                                        </Heading>
+                                        <Flex direction="row" align="center">
+                                            <Text
+                                                as="span"
+                                                size="2"
+                                                className="italic"
+                                            >
+                                                {data.startDate} -{" "}
+                                                {activeTab ===
+                                                "PT. Beemata Indonesia"
+                                                    ? "Present"
+                                                    : data.endDate}
+                                            </Text>
+                                            <Dot />
+                                            <Text
+                                                as="span"
+                                                size="2"
+                                                color="blue"
+                                                className="italic"
+                                            >
+                                                {calculateDuration(
+                                                    data.startDate,
+                                                    data.endDate,
+                                                )}
+                                            </Text>
+                                        </Flex>
+                                        <Text as="span" size="2">
+                                            {data.type}
                                         </Text>
-                                        <Dot />
-                                        <Text
-                                            as="span"
-                                            size="2"
-                                            color="blue"
-                                            className="italic"
-                                        >
-                                            {calculateDuration(
-                                                data.startDate,
-                                                data.endDate,
-                                            )}
+                                        <Text as="p" color="gray">
+                                            {data.description}
                                         </Text>
                                     </Flex>
-                                    <Text as="span" size="2">
-                                        {data.type}
-                                    </Text>
-                                    <Text as="p" color="gray">
-                                        {data.description}
-                                    </Text>
-                                </Flex>
-                            </motion.div>
-                        </li>
-                    ))}
-                </ol>
+                                </motion.div>
+                            </li>
+                        ))}
+                    </ol>
+                )}
             </Box>
         </Flex>
     </Fragment>

@@ -15,6 +15,7 @@ export interface Tab {
 }
 
 export interface ExperiencesViewProps {
+    isPending: boolean;
     activeTab: ExperiencesType;
     handleChangeActiveTab: (tab: ExperiencesType) => void;
     dataExperienceByActiveTab: Experience[];

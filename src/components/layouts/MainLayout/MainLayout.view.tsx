@@ -10,10 +10,12 @@ import { Outlet } from "react-router";
 import Sidebar from "@components/organisms/Sidebar";
 import { MainLayoutViewProps } from "./MainLayout.types";
 import { motion } from "motion/react";
+import NavigatorFallback from "@viewports/Navigator/Navigator.fallback";
 
 export const MotionIconButton = motion.create(IconButton);
 
 const MainLayoutView: FC<MainLayoutViewProps> = ({
+    isPending,
     isOpenSidebar,
     activeMenu,
     handleChangeUIMenu,
@@ -114,7 +116,11 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({
             </motion.div>
             {/* End of Render Sidebar Button */}
             {/* Render UI Menu */}
-            <Outlet />
+            {isPending ? (
+                <NavigatorFallback />
+            ) : (
+                <Outlet />
+            )}
             {/* End of Render UI Menu */}
         </Flex>
         {/* End of Content */}

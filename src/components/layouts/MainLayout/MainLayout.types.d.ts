@@ -8,6 +8,7 @@ export interface Menu {
 }
 
 export interface MainLayoutViewProps {
+    isPending: boolean;
     isOpenSidebar: boolean;
     activeMenu: MenuType;
     handleChangeUIMenu: (menu: MenuType) => void;
