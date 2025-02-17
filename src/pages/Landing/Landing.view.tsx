@@ -5,6 +5,7 @@ import { renderMenuUiVariants } from "./Landing.data";
 import Home from "./Home";
 import About from "./About";
 import Skills from "./Skills";
+import Experiences from "./Experiences";
 
 const LandingView: FC<LandingViewProps> = ({ activeMenu }) => (
     <AnimatePresence mode="wait">
@@ -22,6 +23,8 @@ const LandingView: FC<LandingViewProps> = ({ activeMenu }) => (
                 <About />
             ) : activeMenu === "Skills" ? (
                 <Skills />
+            ) : activeMenu === 'Experiences' ? (
+                <Experiences />
             ) : (
                 <Home />
             )}

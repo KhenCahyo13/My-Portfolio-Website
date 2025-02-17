@@ -19,7 +19,13 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({
     handleChangeUIMenu,
     handleToggleSidebar,
 }) => (
-    <Flex height="100vh" direction="row" position="relative">
+    <Flex
+        height="100vh"
+        direction="row"
+        position="relative"
+        overflowY="hidden"
+        overflowX="hidden"
+    >
         {/* Sidebar */}
         <Box display={{ md: "none" }}>
             <motion.div
@@ -69,20 +75,17 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({
 
         {/* Content */}
         <Flex
-            px={{ initial: "6", lg: "9" }}
-            py="6"
             direction="column"
-            height="100%"
-            minHeight="100%"
             flexGrow="1"
-            position="relative"
+            height="100%"
             overflowX="hidden"
+            overflowY="scroll"
         >
             {/* Render Sidebar Button */}
             <motion.div
                 animate={{ justifyContent: isOpenSidebar ? "end" : "start" }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className={`px-4 flex md:hidden ${isOpenSidebar ? "justify-end" : "justify-start"}`}
+                className={`px-12 py-6 flex md:hidden ${isOpenSidebar ? "justify-end" : "justify-start"}`}
             >
                 <MotionIconButton
                     variant="ghost"
@@ -110,11 +113,8 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({
                 </MotionIconButton>
             </motion.div>
             {/* End of Render Sidebar Button */}
-
             {/* Render UI Menu */}
-            <Box py={activeMenu !== "Home" ? "5" : "0"}>
-                <Outlet />
-            </Box>
+            <Outlet />
             {/* End of Render UI Menu */}
         </Flex>
         {/* End of Content */}

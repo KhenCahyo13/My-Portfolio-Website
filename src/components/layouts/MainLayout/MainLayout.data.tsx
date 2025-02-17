@@ -1,4 +1,4 @@
-import { Book, Code, Home } from "lucide-react";
+import { Award, Book, Briefcase, Code, Home } from "lucide-react";
 import { Menu } from "./MainLayout.types";
 
 export const menus: Menu[] = [
@@ -13,6 +13,14 @@ export const menus: Menu[] = [
     {
         label: "Skills",
         icon: <Code size={20} />,
+    },
+    {
+        label: 'Experiences',
+        icon: <Briefcase size={20} />
+    },
+    {
+        label: 'License and Certification',
+        icon: <Award size={20} />
     },
 ];
 

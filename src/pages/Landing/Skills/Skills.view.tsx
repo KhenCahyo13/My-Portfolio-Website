@@ -17,7 +17,7 @@ const SkillsView: FC = () => (
         >
             <div className="size-[44rem] md:size-[64rem] lg:size-[80rem] rounded-full bg-radial from-blue-700/30 via-transparent to-transparent"></div>
         </Box>
-        <Flex direction="column" justify="center" gapY="4">
+        <Flex direction="column" justify="center" gapY="4" py='6' px={{ initial: "6", lg: "9" }}>
             <Heading as="h1" size={{ initial: "6", md: "7" }}>
                 SKILLS
             </Heading>

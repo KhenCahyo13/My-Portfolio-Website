@@ -16,6 +16,9 @@ const AboutView: FC = () => (
             gapX="8"
             justify="center"
             align="center"
+            py='6' px={{ initial: "6", lg: "9" }}
+            height='100vh'
+            overflowY={{ initial: 'scroll', md: 'hidden' }}
         >
             <Box
                 width={{ initial: "12rem", md: "48rem", lg: "68rem" }}

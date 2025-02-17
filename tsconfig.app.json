@@ -28,6 +28,7 @@
       "@pages/*": ["pages/*"],
       "@viewports/*": ["viewports/*"],
       "@data/*": ["data/*"],
+      "@utils/*": ["utils/*"],
     }
   },
   "include": ["src"]
