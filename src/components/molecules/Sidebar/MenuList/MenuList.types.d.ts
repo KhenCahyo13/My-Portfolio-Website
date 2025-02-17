@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
 export interface MenuListProps {
-    children: ReactNode;
-    parenttype?: string;
+  children: ReactNode;
+  parenttype?: string;
 }

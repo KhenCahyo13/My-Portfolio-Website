@@ -1,4 +1,4 @@
 export interface Skill {
-    label: string;
-    logo: string;
+  label: string;
+  logo: string;
 }
