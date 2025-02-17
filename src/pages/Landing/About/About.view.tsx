@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Text } from "@radix-ui/themes";
+import { Box, Button, Flex, Heading, Link, Text } from "@radix-ui/themes";
 import { FC, Fragment, memo } from "react";
 import { motion } from "motion/react";
 
@@ -78,7 +78,9 @@ const AboutView: FC = () => (
                         </Text>
                     </Flex>
                     <Flex direction="row" gapX="2">
-                        <Button>Download CV</Button>
+                        <Link href="/assets/cv/CV-KhenMuhammadCahyo.pdf" download='CV-KhenMuhammadCahyo.pdf' target="_blank">
+                            <Button>Download CV</Button>
+                        </Link>
                     </Flex>
                 </Flex>
             </motion.div>
