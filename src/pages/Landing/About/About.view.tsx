@@ -37,7 +37,7 @@ const AboutView: FC = () => (
 				animate={{ opacity: 1 }}
 				transition={{ type: 'spring', stiffness: 100, damping: 25 }}
 			>
-				<Flex direction="column" gapY="4">
+				<Flex direction="column" gapY="4" height={{ initial: '100%', md: '100vh' }} justify={{ initial: 'start', md: 'center' }}>
 					<Heading as='h1' size={{ initial: '6', md: '7' }}>ABOUT ME</Heading>
 					<Flex direction="column" gapY="2">
 						<Text as="p" className='font-oxanium'>
