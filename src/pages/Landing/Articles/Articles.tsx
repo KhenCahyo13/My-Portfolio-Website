@@ -11,7 +11,7 @@ const Articles: FC = () => {
     );
 
     if (isError) return (
-        'Error!'
+        'Sorry, something went wrong :('
     );
 
     return <ArticlesView
