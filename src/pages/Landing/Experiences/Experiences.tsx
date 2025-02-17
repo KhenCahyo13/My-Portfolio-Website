@@ -1,10 +1,14 @@
 import { FC, useMemo, useState, useTransition } from "react";
 import ExperiencesView from "./Experiences.view";
 import { ExperiencesType } from "./Experiences.types";
-import { ptBeemataIndonesiaExperiences, ptSekawanMediaExperiences } from "./Experiences.data";
+import {
+    ptBeemataIndonesiaExperiences,
+    ptSekawanMediaExperiences,
+} from "./Experiences.data";
 
 const Experiences: FC = () => {
-    const [activeTab, setActiveTab] = useState<ExperiencesType>('PT. Sekawan Media');
+    const [activeTab, setActiveTab] =
+        useState<ExperiencesType>("PT. Sekawan Media");
     const [isPending, startTransition] = useTransition();
 
     const handleChangeActiveTab = (tab: ExperiencesType) => {
@@ -14,14 +18,20 @@ const Experiences: FC = () => {
     };
 
     const dataExperienceByActiveTab = useMemo(() => {
-        return activeTab === 'PT. Sekawan Media' ? ptSekawanMediaExperiences : activeTab === 'PT. Beemata Indonesia' ? ptBeemataIndonesiaExperiences : ptSekawanMediaExperiences;
+        return activeTab === "PT. Sekawan Media"
+            ? ptSekawanMediaExperiences
+            : activeTab === "PT. Beemata Indonesia"
+              ? ptBeemataIndonesiaExperiences
+              : ptSekawanMediaExperiences;
     }, [activeTab]);
 
-    return <ExperiencesView
-        activeTab={activeTab}
-        handleChangeActiveTab={handleChangeActiveTab}
-        dataExperienceByActiveTab={dataExperienceByActiveTab}
-    />;
+    return (
+        <ExperiencesView
+            activeTab={activeTab}
+            handleChangeActiveTab={handleChangeActiveTab}
+            dataExperienceByActiveTab={dataExperienceByActiveTab}
+        />
+    );
 };
 
 export default Experiences;

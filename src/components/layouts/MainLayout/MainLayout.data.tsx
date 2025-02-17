@@ -15,16 +15,16 @@ export const menus: Menu[] = [
         icon: <Code size={20} />,
     },
     {
-        label: 'License and Certification',
-        icon: <Award size={20} />
+        label: "License and Certification",
+        icon: <Award size={20} />,
     },
     {
-        label: 'Experiences',
-        icon: <Briefcase size={20} />
+        label: "Experiences",
+        icon: <Briefcase size={20} />,
     },
     {
-        label: 'Articles',
-        icon: <Newspaper size={20} />
+        label: "Articles",
+        icon: <Newspaper size={20} />,
     },
 ];
 

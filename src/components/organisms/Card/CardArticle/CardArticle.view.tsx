@@ -1,7 +1,16 @@
 import { FC, memo } from "react";
 import { CardArticleViewProps } from "./CardArticle.types";
 import { motion } from "motion/react";
-import { Avatar, Badge, Box, Card, Flex, Heading, Link, Text } from "@radix-ui/themes";
+import {
+    Avatar,
+    Badge,
+    Box,
+    Card,
+    Flex,
+    Heading,
+    Link,
+    Text,
+} from "@radix-ui/themes";
 import { dateTimeConverter } from "@utils/datetime";
 
 const CardArticleView: FC<CardArticleViewProps> = ({

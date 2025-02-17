@@ -1,4 +1,10 @@
-export type MenuType = "Home" | "About" | "Skills" | "Experiences" | "License and Certification" | "Articles";
+export type MenuType =
+    | "Home"
+    | "About"
+    | "Skills"
+    | "Experiences"
+    | "License and Certification"
+    | "Articles";
 
 export interface SidebarStore {
     isOpenSidebar: boolean;

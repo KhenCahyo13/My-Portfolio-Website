@@ -32,8 +32,15 @@ const CardImagePreview: FC<CardImagePreviewViewProps> = ({
                 justify="center"
                 height={{ initial: "8rem", md: "10rem" }}
             >
-                <Box width={{ initial: '5rem', md: '6rem' }} height={{ initial: '5rem', md: '6rem' }}>
-                    <img src={image} alt={label} className="object-cover h-full w-full rounded-md" />
+                <Box
+                    width={{ initial: "5rem", md: "6rem" }}
+                    height={{ initial: "5rem", md: "6rem" }}
+                >
+                    <img
+                        src={image}
+                        alt={label}
+                        className="object-cover h-full w-full rounded-md"
+                    />
                 </Box>
                 <Text align="center" className="font-medium flex-1">
                     {label}

@@ -1,4 +1,4 @@
-export type ExperiencesType = 'PT. Sekawan Media' | 'PT. Beemata Indonesia';
+export type ExperiencesType = "PT. Sekawan Media" | "PT. Beemata Indonesia";
 
 export interface Experience {
     id: string;

@@ -29,4 +29,4 @@ export interface Article {
 export interface ArticlesViewProps {
     articles: Item[] | undefined;
     feed: Feed | undefined;
-};
+}

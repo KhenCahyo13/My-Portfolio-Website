@@ -23,7 +23,7 @@ const ExperiencesView: FC<ExperiencesViewProps> = ({
             gapX="8"
             gapY="4"
             height="100vh"
-            py={{ initial: '4', md: '6' }}
+            py={{ initial: "4", md: "6" }}
             px={{ initial: "6", lg: "9" }}
         >
             <Flex
@@ -90,11 +90,24 @@ const ExperiencesView: FC<ExperiencesViewProps> = ({
                                         {data.position}
                                     </Heading>
                                     <Flex direction="row" align="center">
-                                        <Text as="span" size="2" className="italic">
-                                            {data.startDate} - {activeTab === 'PT. Beemata Indonesia' ? 'Present' : data.endDate}
+                                        <Text
+                                            as="span"
+                                            size="2"
+                                            className="italic"
+                                        >
+                                            {data.startDate} -{" "}
+                                            {activeTab ===
+                                            "PT. Beemata Indonesia"
+                                                ? "Present"
+                                                : data.endDate}
                                         </Text>
                                         <Dot />
-                                        <Text as="span" size="2" color="blue" className="italic">
+                                        <Text
+                                            as="span"
+                                            size="2"
+                                            color="blue"
+                                            className="italic"
+                                        >
                                             {calculateDuration(
                                                 data.startDate,
                                                 data.endDate,

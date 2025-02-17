@@ -16,9 +16,10 @@ const AboutView: FC = () => (
             gapX="8"
             justify="center"
             align="center"
-            py='6' px={{ initial: "6", lg: "9" }}
-            height='100vh'
-            overflowY={{ initial: 'scroll', md: 'hidden' }}
+            py="6"
+            px={{ initial: "6", lg: "9" }}
+            height="100vh"
+            overflowY={{ initial: "scroll", md: "hidden" }}
         >
             <Box
                 width={{ initial: "12rem", md: "48rem", lg: "68rem" }}
@@ -50,7 +51,11 @@ const AboutView: FC = () => (
                         ABOUT ME
                     </Heading>
                     <Flex direction="column" gapY="2">
-                        <Text as="p" className="font-oxanium" size={{ initial: '3', lg: '4' }}>
+                        <Text
+                            as="p"
+                            className="font-oxanium"
+                            size={{ initial: "3", lg: "4" }}
+                        >
                             Hello! I'm{" "}
                             <Text color="blue" className="font-medium">
                                 Khen Muhammad Cahyo
@@ -64,7 +69,11 @@ const AboutView: FC = () => (
                             continuously learning and honing my skills in
                             building intuitive and efficient applications.
                         </Text>
-                        <Text as="p" className="font-oxanium" size={{ initial: '3', lg: '4' }}>
+                        <Text
+                            as="p"
+                            className="font-oxanium"
+                            size={{ initial: "3", lg: "4" }}
+                        >
                             Beyond coding, I have a strong curiosity for
                             emerging technologies and enjoy exploring new
                             fields. Currently, I am expanding my knowledge in{" "}
@@ -78,7 +87,11 @@ const AboutView: FC = () => (
                         </Text>
                     </Flex>
                     <Flex direction="row" gapX="2">
-                        <Link href="/assets/cv/CV-KhenMuhammadCahyo.pdf" download='CV-KhenMuhammadCahyo.pdf' target="_blank">
+                        <Link
+                            href="/assets/cv/CV-KhenMuhammadCahyo.pdf"
+                            download="CV-KhenMuhammadCahyo.pdf"
+                            target="_blank"
+                        >
                             <Button>Download CV</Button>
                         </Link>
                     </Flex>

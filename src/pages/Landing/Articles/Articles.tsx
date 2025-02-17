@@ -6,18 +6,11 @@ import NavigatorFallback from "@viewports/Navigator/Navigator.fallback";
 const Articles: FC = () => {
     const { data, isLoading, isError } = useGetMediumArticles();
 
-    if (isLoading) return (
-        <NavigatorFallback />
-    );
+    if (isLoading) return <NavigatorFallback />;
 
-    if (isError) return (
-        'Sorry, something went wrong :('
-    );
+    if (isError) return "Sorry, something went wrong :(";
 
-    return <ArticlesView
-        articles={data?.items}
-        feed={data?.feed}
-    />
+    return <ArticlesView articles={data?.items} feed={data?.feed} />;
 };
 
 export default Articles;

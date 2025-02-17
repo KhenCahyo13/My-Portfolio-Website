@@ -9,13 +9,15 @@ const CardArticle: FC<CardArticleProps> = ({ article, feed, index }) => {
         threshold: 0.1,
     });
 
-    return <CardArticleView
-        article={article}
-        feed={feed}
-        index={index}
-        ref={ref}
-        inView={inView}
-    />;
+    return (
+        <CardArticleView
+            article={article}
+            feed={feed}
+            index={index}
+            ref={ref}
+            inView={inView}
+        />
+    );
 };
 
 export default memo(CardArticle);

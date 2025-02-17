@@ -25,11 +25,11 @@ const LandingView: FC<LandingViewProps> = ({ activeMenu }) => (
                 <About />
             ) : activeMenu === "Skills" ? (
                 <Skills />
-            ) : activeMenu === 'Experiences' ? (
+            ) : activeMenu === "Experiences" ? (
                 <Experiences />
-            ) : activeMenu === 'License and Certification' ? (
+            ) : activeMenu === "License and Certification" ? (
                 <AAC />
-            ) : activeMenu === 'Articles' ? (
+            ) : activeMenu === "Articles" ? (
                 <Articles />
             ) : (
                 <Home />

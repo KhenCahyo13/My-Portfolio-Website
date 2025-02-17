@@ -10,7 +10,7 @@ const NavigatorFallback: FC = () => (
         >
             <div className="size-[44rem] md:size-[64rem] lg:size-[80rem] rounded-full bg-radial from-blue-700/30 via-transparent to-transparent"></div>
         </Box>
-        <Flex height='100vh' width='100%' align='center' justify='center'>
+        <Flex height="100vh" width="100%" align="center" justify="center">
             <HashLoader color="#ffffff" loading={true} size={44} />
         </Flex>
     </Fragment>

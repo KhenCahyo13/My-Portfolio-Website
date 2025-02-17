@@ -3,7 +3,11 @@ import { useInView } from "react-intersection-observer";
 import { CardImagePreviewProps } from "./CardImagePreview.types";
 import CardImagePreviewView from "./CardImagePreview.view";
 
-const CardImagePreview: FC<CardImagePreviewProps> = ({ label, image, index }) => {
+const CardImagePreview: FC<CardImagePreviewProps> = ({
+    label,
+    image,
+    index,
+}) => {
     const { ref, inView } = useInView({
         triggerOnce: false,
         threshold: 0.1,

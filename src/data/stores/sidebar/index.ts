@@ -6,5 +6,5 @@ export const useSidebarStore = create<SidebarStore>((set) => ({
     activeMenu: "Home",
     changeActiveMenu: (menu: MenuType) => set(() => ({ activeMenu: menu })),
     toggleSidebar: () =>
-        set((state) => ({ isOpenSidebar: !state.isOpenSidebar })), 
+        set((state) => ({ isOpenSidebar: !state.isOpenSidebar })),
 }));

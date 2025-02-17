@@ -15,7 +15,7 @@ const ArticlesView: FC<ArticlesViewProps> = ({ articles, feed }) => (
             direction="column"
             justify="center"
             gapY="4"
-            py={{ initial: '4', md: '6' }}
+            py={{ initial: "4", md: "6" }}
             px={{ initial: "6", lg: "9" }}
         >
             <Flex direction="column" gapY="1">
@@ -28,7 +28,7 @@ const ArticlesView: FC<ArticlesViewProps> = ({ articles, feed }) => (
                     people. Here are some of the articles I've written.
                 </Text>
             </Flex>
-            <Grid columns={{ initial: "1", md: "2", lg: "3" }} gap='4'>
+            <Grid columns={{ initial: "1", md: "2", lg: "3" }} gap="4">
                 {articles &&
                     articles.length > 0 &&
                     articles.map((article, index) => (
