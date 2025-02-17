@@ -7,6 +7,7 @@ import About from "./About";
 import Skills from "./Skills";
 import Experiences from "./Experiences";
 import AAC from "./AAC";
+import Articles from "./Articles";
 
 const LandingView: FC<LandingViewProps> = ({ activeMenu }) => (
     <AnimatePresence mode="wait">
@@ -28,6 +29,8 @@ const LandingView: FC<LandingViewProps> = ({ activeMenu }) => (
                 <Experiences />
             ) : activeMenu === 'License and Certification' ? (
                 <AAC />
+            ) : activeMenu === 'Articles' ? (
+                <Articles />
             ) : (
                 <Home />
             )}

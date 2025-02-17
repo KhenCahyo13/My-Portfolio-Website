@@ -51,3 +51,20 @@ export const getCurrentDate = (): string => {
 
     return `${month} ${year}`;
 };
+
+export const dateTimeConverter = (dateTime: string, format: string = 'en-US'): string => {
+    const date = new Date(dateTime);
+
+    const options: Intl.DateTimeFormatOptions = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+    };
+
+    const formatter = new Intl.DateTimeFormat(format, options);
+    return formatter.format(date);
+};

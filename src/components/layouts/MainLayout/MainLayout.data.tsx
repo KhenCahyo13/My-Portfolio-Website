@@ -1,4 +1,4 @@
-import { Award, Book, Briefcase, Code, Home } from "lucide-react";
+import { Award, Book, Briefcase, Code, Home, Newspaper } from "lucide-react";
 import { Menu } from "./MainLayout.types";
 
 export const menus: Menu[] = [
@@ -21,6 +21,10 @@ export const menus: Menu[] = [
     {
         label: 'Experiences',
         icon: <Briefcase size={20} />
+    },
+    {
+        label: 'Articles',
+        icon: <Newspaper size={20} />
     },
 ];
 
