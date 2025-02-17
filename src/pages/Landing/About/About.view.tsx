@@ -18,8 +18,8 @@ const AboutView: FC = () => (
             align="center"
         >
             <Box
-                width={{ initial: "12rem", md: "48rem", lg: "60rem" }}
-                height={{ initial: "16rem", md: "20rem", lg: "28rem" }}
+                width={{ initial: "12rem", md: "48rem", lg: "68rem" }}
+                height={{ initial: "16rem", md: "20rem", lg: "32rem" }}
             >
                 <motion.img
                     src="https://i.pinimg.com/736x/31/80/20/3180209e6266787131f4b63126da4e1d.jpg"
@@ -47,7 +47,7 @@ const AboutView: FC = () => (
                         ABOUT ME
                     </Heading>
                     <Flex direction="column" gapY="2">
-                        <Text as="p" className="font-oxanium">
+                        <Text as="p" className="font-oxanium" size={{ initial: '3', lg: '4' }}>
                             Hello! I'm{" "}
                             <Text color="blue" className="font-medium">
                                 Khen Muhammad Cahyo
@@ -61,7 +61,7 @@ const AboutView: FC = () => (
                             continuously learning and honing my skills in
                             building intuitive and efficient applications.
                         </Text>
-                        <Text as="p" className="font-oxanium">
+                        <Text as="p" className="font-oxanium" size={{ initial: '3', lg: '4' }}>
                             Beyond coding, I have a strong curiosity for
                             emerging technologies and enjoy exploring new
                             fields. Currently, I am expanding my knowledge in{" "}
