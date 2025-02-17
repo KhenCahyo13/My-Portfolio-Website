@@ -23,22 +23,22 @@ export const letterVariants = {
 // Social media links
 export const socialMediaLinks: SocialMediaLink[] = [
     {
-        href: "#",
+        href: "https://github.com/KhenCahyo13",
         icon: <Github size={18} />,
         rotate: -12,
     },
     {
-        href: "#",
+        href: "https://www.linkedin.com/in/khen-muhammad-cahyo-838028245/",
         icon: <Linkedin size={18} />,
         rotate: 12,
     },
     {
-        href: "#",
+        href: "https://www.instagram.com/khencahyo.13/",
         icon: <Instagram size={18} />,
         rotate: -12,
     },
     {
-        href: "#",
+        href: "https://www.facebook.com/khencahyo.13/",
         icon: <Facebook size={18} />,
         rotate: 12,
     },

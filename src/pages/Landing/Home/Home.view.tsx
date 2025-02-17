@@ -98,7 +98,7 @@ const HomeView: FC = () => (
             {/* Render Social Media links */}
             <Flex direction="row" gapX="6">
                 {socialMediaLinks.map((link, index) => (
-                    <Link key={index} href={link.href}>
+                    <Link key={index} href={link.href} target="_blank">
                         <IconButton asChild>
                             <motion.div
                                 initial={{ x: -100, rotate: 0, opacity: 0 }}
