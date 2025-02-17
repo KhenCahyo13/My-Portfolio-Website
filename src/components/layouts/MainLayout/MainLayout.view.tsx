@@ -22,7 +22,7 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, ha
             >
                 <Sidebar.Root>
                     <Sidebar.Logo>
-                        <Code2 size={24} />
+                        <Code2 size={32} />
                     </Sidebar.Logo>
                     <Sidebar.MenuList>
                         {menus.map((menu) => (
@@ -47,7 +47,7 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, ha
 		{/* End of Sidebar */}
 
 		{/* Content */}
-		<Box px="4" py="6" height="100%" flexGrow="1" overflow="hidden" position="relative">
+		<Flex px={{ initial: '6', lg: '9' }} py="6" direction='column' gapY={activeMenu !== 'Home' ? '6' : '0'} height="100%" flexGrow="1" overflowY="scroll" overflowX='hidden' position="relative">
 			{/* Render Sidebar Button */}
 			<motion.div
 				animate={{ justifyContent: isOpenSidebar ? 'end' : 'start' }}
@@ -84,7 +84,7 @@ const MainLayoutView: FC<MainLayoutViewProps> = ({ isOpenSidebar, activeMenu, ha
             {/* Render UI Menu */}
 			<Outlet />
             {/* End of Render UI Menu */}
-		</Box>
+		</Flex>
 		{/* End of Content */}
 	</Flex>
 );

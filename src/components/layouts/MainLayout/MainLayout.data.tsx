@@ -4,11 +4,11 @@ import { Menu } from './MainLayout.types';
 export const menus: Menu[] = [
 	{
 		label: 'Home',
-		icon: <Home size={18} />,
+		icon: <Home size={20} />,
 	},
 	{
 		label: 'About',
-		icon: <Info size={18} />,
+		icon: <Info size={20} />,
 	},
 ];
 

@@ -8,7 +8,7 @@
 
 /* Override Radix UI Base Themes */
 .radix-themes {
-    --heading-font-family: 'Oxanium'
+    --default-font-family: 'Oxanium';
 }
 
 .dark,

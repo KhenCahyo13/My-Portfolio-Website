@@ -1,7 +1,7 @@
 import { Box, Code, Flex, Heading, IconButton, Link, Text } from '@radix-ui/themes';
 import { FC, Fragment, memo } from 'react';
 import { motion } from 'motion/react';
-import { letterVariants, name, socialMediaLinks, textVariants } from '../Landing.data';
+import { letterVariants, name, socialMediaLinks, textVariants } from './Home.data';
 
 const HomeView: FC = () => (
 	<Fragment>
@@ -9,7 +9,7 @@ const HomeView: FC = () => (
 			<div className="size-[44rem] md:size-[64rem] lg:size-[80rem] rounded-full bg-radial from-blue-700/30 via-transparent to-transparent"></div>
 		</Box>
 		<Flex direction="column" gapY="5" justify="center" align="center" height="100%">
-			<Flex direction="column" gapY="2" width="fit-content">
+			<Flex direction="column" gapY={{ initial: '1', md: '2' }} width="fit-content">
 				{/* Render Hello */}
 				<motion.div
 					initial={{ y: -100, opacity: 0 }}
@@ -22,13 +22,13 @@ const HomeView: FC = () => (
 						delay: 3.8,
 					}}
 				>
-					<Code className="w-fit -rotate-12 block">HELLO, I'M</Code>
+					<Code size={{ initial: '2', md: '3' }} className="w-fit -rotate-12 block">HELLO, I'M</Code>
 				</motion.div>
 				{/* End of Render Hello */}
 
 				{/* Render Name */}
 				<motion.div initial="hidden" animate="visible" variants={textVariants}>
-					<Heading size="9">
+					<Heading size={{ initial: '8', md: '9' }}>
 						{name.split('').map((char, index) => (
 							<motion.span key={index} variants={letterVariants}>
 								{char}
@@ -45,7 +45,7 @@ const HomeView: FC = () => (
 					transition={{ duration: 1.2, ease: 'easeInOut', delay: 2.5 }}
 					className="text-right"
 				>
-					<Text size="4" weight="medium" className="font-oxanium">
+					<Text size={{ initial: '3', md: '4' }} weight="medium" className="font-oxanium">
 						FULLSTACK DEVELOPER
 					</Text>
 				</motion.div>
